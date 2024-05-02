@@ -1,0 +1,17 @@
+org: luizcalaca
+app: ingest-data-lambda-service
+service: aws-node-express-api-project
+frameworkVersion: "3"
+
+plugins:
+  - serverless-plugin-typescript
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+
+functions:
+  api:
+    handler: index.handler
+    events:
+      - httpApi: "*"
