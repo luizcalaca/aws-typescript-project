@@ -10,8 +10,15 @@ provider:
   name: aws
   runtime: nodejs18.x
 
+  iamRoleStatements:
+    - Effect: "Allow"
+      Action:
+        - "s3:PutObject"
+      Resource:
+        - "arn:aws:s3:::${file(config.json):S3_BUCKET_NAME}/*"
+
 functions:
   api:
-    handler: index.handler
+    handler: src/index.handler
     events:
       - httpApi: "*"
