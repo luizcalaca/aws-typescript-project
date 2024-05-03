@@ -12,8 +12,8 @@ export const uploadController = async (req: RequestWithFile, res: Response) => {
 
   const params = {
     Bucket: config.S3_BUCKET_NAME,
-    Key:  `upload-to-s3/${randomUUID()}.csv`,
-    Body: file
+    Key:  `${randomUUID()}.csv`,
+    Body: `${file}`
   };
 
   try {
