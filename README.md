@@ -6,6 +6,16 @@ Node Express API service running on AWS Lambda using the traditional Serverless 
 
 ## Usage
 
+### 1 - We can send a CSV file using the first lambda function:
+
+`https://5ggmzgm3le.execute-api.us-east-1.amazonaws.com/upload``
+
+![Upload](./images-docs/upload.png)
+
+### 2 - The second lambda function to get the intents and others processing will be triggered after get a CSV file from a S3 bucket, here it is: https://github.com/luizcalaca/aws-typescript-project-read-csv-ai
+
+### 3 - The third lambda function we could get the conversations paginated, and it is still in development.
+
 ### Deployment
 
 Install dependencies with:
