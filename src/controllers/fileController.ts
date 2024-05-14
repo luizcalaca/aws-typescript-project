@@ -3,7 +3,7 @@ import { s3 } from '../services/fileService'
 import { randomUUID } from 'crypto';
 import config from '../../config.json'
 
-export interface RequestWithFile extends Request {
+export interface RequestWithFile extends Request { 
   file?: Express.Multer.File;
 }
 
